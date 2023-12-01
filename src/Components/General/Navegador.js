@@ -1,22 +1,30 @@
-import React from "react";
-
-function Navegador(){
-    return(
-        <header>
-            <nav>
-                <ul className="nav nav-tabs">
-                    <li className="nav-item"><a href="/">Home</a></li>
-                    <li className="nav-item"><a href="/Login">Login</a></li>
-                    <li className="nav-item"><a href="/Account">Cuenta</a></li>
-                    <li className="nav-item"><a href="/Admin">Admin</a></li>                    
-                    <li className="nav-item"><a href="/Machine">Maquinas</a></li>                    
-                    <li className="nav-item"><a href="/OperatorUsers">UsuariosOperadores</a></li>                    
-                    <li className="nav-item"><a href="/Customer">Clientes</a></li>                    
-                    <li className="nav-item"><a href="/Rentals">Alquileres</a></li>                    
-                </ul>
-            </nav>
-        </header>
-    )
+import React from 'react'
+import { PrimaryNav, MenuLink, Menu, Hamburger } from './NavElements'
+const Navegador = () => {
+  return (
+    <>
+      <PrimaryNav>
+        <Hamburger />
+        <Menu>        
+          <MenuLink to="/" activestyle>
+          Home
+          </MenuLink>
+          <MenuLink to="/Admin" activestyle>
+            Admin
+          </MenuLink>
+          <MenuLink to="/Machine" activestyle>
+          Maquinas
+          </MenuLink>
+          <MenuLink to="/OperatorUsers" activestyle>
+          UsuariosOperadores
+          </MenuLink>
+          <MenuLink to="/Customer" activestyle>
+          Clientes
+          </MenuLink>
+          
+        </Menu>
+      </PrimaryNav>
+    </>
+  )
 }
-
-export default Navegador;
+export default Navegador
